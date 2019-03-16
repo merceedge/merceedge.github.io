@@ -1,7 +1,7 @@
 # MerceEdge Website Roadmap 
 
 * Home
-* Quick Start
+* Get Started
     * installation
     * run a demo
 * Documents
