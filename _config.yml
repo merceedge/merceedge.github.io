@@ -1,6 +1,6 @@
 name: MerceEdge
 description: DopeTrope template for Jekyll
 paginate: 10
-baseurl: '/MerceEdge'
+url: 'https://merceedge.github.io/'
 
 
