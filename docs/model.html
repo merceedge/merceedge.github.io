@@ -1,0 +1,65 @@
+---
+title: MerceEdge Abstract model
+layout: default
+---
+
+<body class="abstract-model">
+    {% include nav.html %}
+
+
+    <div id="main-wrapper">
+        <div class="container">
+            <article class="box">
+                <header>
+                    <h2>Abstract model</h2>
+                </header>
+                <p align="center">
+                    <img src="https://github.com/merceedge/resources/blob/master/MerceEdge_models.png?raw=true", 
+                    width="1000px">
+                </p>
+
+                <p>
+                    MerceEdge's core abstract models include:
+                </p>
+
+                <li>
+                    Component
+                </li>
+                <p>
+                    A component is a mapping that represents a real physical IOT device, 
+                    and the user does not need any code implementation. 
+                    The component relies on the interface to input and output data to MerceEdge.
+                </p>
+                
+                <li>Interface</li>
+                <p>
+                    The interface is divided into input (Input) and output (Output), 
+                    the interface can reflect various IOT communication protocols, 
+                    and can also be used as communication between MerceEdge internal Wireload.
+                </p>
+
+                <li>Wire</li>
+                <p>
+                    Wired connections to a variety of different interfaces allow IOT heterogeneous protocols to be fused 
+                    together through MerceEdge internal communications.
+                </p>
+
+                <li>Wireload</li>
+                <p>
+                    A Wiredload is a special component that handles the flow of data on a wire. 
+                    Users need to code their own wireload implementation
+                </p>
+
+                <li>Formula</li>
+                <p>
+                    The Formula is a solution to organize the configuration of components, interfaces, wires, and wireloads.
+                </p>
+               
+
+            </article>
+           
+        </div>
+        
+    </div>
+
+</body>

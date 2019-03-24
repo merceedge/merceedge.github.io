@@ -1,0 +1,123 @@
+---
+title: MerceEdge installation
+layout: default
+---
+
+<body class="installation">
+    {% include nav.html %}
+
+
+    <div id="main-wrapper">
+        <div class="container">
+            <article class="box">
+                <header>
+                    <h2>Installation</h2>
+                </header>
+                <header>
+                    <h3>Install from code</h3>
+                </header>
+                <p>1. Get source code</p>
+                <pre>
+                    <code>
+git clone https://github.com/merceedge/MerceEdge.git
+git submodule init
+git submodule update     
+                    </code>
+                </pre>
+
+                <p>2. Install python3.6 environment</p>
+                <p>
+                It is best to use virtualenv or pipenv, please install according to your operating system environment.
+                </p>
+                <p>
+                Install a mqtt server locally (because MerceEdge uses the MQTT service, we need an MQTT server. We can also specify an existing MQTT service in MerceEdge, which will be introduced in the following document. Here we install an MQTT service directly. Just fine). This example uses the mosquitto service. 
+                You can download it by referring to <a href="https://mosquitto.org/download/">here</a>. After installation, it will run by default:
+                </p>
+                <pre>
+                    <code>
+mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf 
+                    </code>
+                </pre>
+
+                <p>3. Install MerceEdge</p>
+                <pre>
+                    <code>
+(MerceEdge) / # cd MerceEdge
+(MerceEdge) MerceEdge # python setup.py develop
+                    </code>
+                </pre>
+
+                <p>4. Verify that the installation</p>
+                <pre>
+                    <code>
+(MerceEdge) MerceEdge # edge
+
+__  __                   _____    _            
+|  \/  | ___ _ __ ___ ___| ____|__| | __ _  ___ 
+| |\/| |/ _ \ '__/ __/ _ \  _| / _` |/ _` |/ _ \
+| |  | |  __/ | | (_|  __/ |__| (_| | (_| |  __/
+|_|  |_|\___|_|  \___\___|_____\__,_|\__, |\___|
+                                   |___/      
+
+Load user config file: 
+...
+
+* Serving Flask app "merceedge.api_server.app" (lazy loading)
+* Environment: production
+WARNING: Do not use the development server in a production environment.
+Use a production WSGI server instead.
+* Debug mode: on
+                    </code>
+                </pre>
+            <header>
+                <h3>Install from docker</h3>
+            </header>
+            <p>
+                1. Install docker and docker-compose
+            </p>
+            <p>
+                2. git clone MerceEdge source code
+            </p>
+            <pre>
+                <code>
+git clone https://github.com/merceedge/MerceEdge.git .
+cd MerceEdge   
+                </code>
+            </pre>
+
+            <p>
+                3. Build docker image
+            </p>
+            <pre>
+                    <code>
+docker-compose build   
+                    </code>
+            </pre>
+
+            <p>
+                4. Run
+            </p>
+            <pre>
+                <code>
+docker-compose up   
+                </code>
+            </pre>
+            <p> If you want run as daemon</p>
+            <pre>
+                <code>
+docker-compose up -d   
+                </code>
+            </pre>
+    
+
+
+            
+                
+            </article>
+           
+            
+        </div>
+        
+    </div>
+
+</body>
